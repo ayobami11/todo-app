@@ -24,3 +24,6 @@ yarn-error.log*
 
 # project files
 /todo-app-main
+
+# README template for react app
+README-react.md

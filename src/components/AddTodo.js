@@ -86,7 +86,7 @@ const AddTodo = () => {
                 spellCheck={false}
                 required
             />
-            <button className='form__btn' type="submit">
+            <button className='form__btn' type="submit" title="Add todo">
                 <span className="sr-only">Add todo</span>
             </button>
         </Form>

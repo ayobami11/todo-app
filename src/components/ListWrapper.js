@@ -44,6 +44,7 @@ const ListWrapperSC = styled.div`
 
     .list__footer {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         padding: .75em 1.25em;

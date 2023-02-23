@@ -100,8 +100,9 @@ const Home = () => {
             <Header>
                 <h1 className='header__heading'>Todo</h1>
 
-                <button className='toggle-btn' onClick={toggleMode}>
+                <button className='toggle-btn' onClick={toggleMode} title="Toggle mode">
                     <img src={isDarkMode ? sunIcon : moonIcon} alt='' />
+                    <span className="sr-only">Toggle mode</span>
                 </button>
             </Header>
             <Main>
@@ -119,9 +120,13 @@ const Home = () => {
                         target="_blank"
                         rel="noreferrer"
                     >Frontend Mentor</a
-                    >. Coded by <a href="https://github.com/ayobami11/">Ayobami Tunwase</a>.</p>
+                    >. Coded by <a
+                        href="https://github.com/ayobami11/todo-app"
+                        target="_blank"
+                        rel="noreferrer">Ayobami Tunwase</a>.
+                </p>
             </Footer>
-        </HomeSC >
+        </HomeSC>
     )
 }
 

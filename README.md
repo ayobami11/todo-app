@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Frontend Mentor - Todo app solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [Features](#features)
+  - [Additional Features](#additional-features)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users can:
 
-### `npm test`
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Add new todos to the list
+- Mark todos as complete
+- Delete todos from the list
+- Filter by all/active/complete todos
+- Clear all completed todos
+- Toggle light and dark mode
+- Drag and drop to reorder items on the list
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Additional features
 
-### `npm run build`
+- Automatically detects and sets the preferred color scheme (light or dark theme)
+- All todos are saved to the browser's memory by default
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Screenshot
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Todo App screenshot](./public/screenshot.png)
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Solution URL: [https://www.frontendmentor.io/solutions/todoapp-8SVWi4zeOq](https://www.frontendmentor.io/solutions/todoapp-8SVWi4zeOq)
+- Live Site URL: [https://todoapp-fem.vercel.app](https://todoapp-fem.vercel.app)
 
-### `npm run eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built with
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Semantic HTML5 markup
+- Flexbox
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [react-beautiful-dnd](https://react-beautiful-dnd.netlify.com/) - React drag and drop library
+- [styled-components](https://styled-components.com/) - For styles
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### What I learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+```css (using styled-components)
+    /*
+      Creates a rounded border gradient in the shape of a hollow circle 
+      (when the checkbox input is hovered)
+    */
+    ${({ theme, $completed }) => !$completed && `
+        border: ${theme.isDarkMode ? '.015em' : '.125em'} double transparent;
+        background-image: linear-gradient(
+            ${theme.isDarkMode ? theme.colors.dark.veryDarkDesaturatedBlue : theme.colors.light.veryLightGray}, 
+            ${theme.isDarkMode ? theme.colors.dark.veryDarkDesaturatedBlue : theme.colors.light.veryLightGray}),
+            ${theme.colors.checkBackground};
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        padding: .25em;
+    `}
+```
+### Useful resources
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Adding drag-and-drop functionality with react-beautiful-dnd](https://blog.logrocket.com/adding-drag-and-drop-functionality-with-react-beautiful-dnd/) - This article helped me understand how to add basic drag-and-drop functionality using [react-beautiful-dnd](https://react-beautiful-dnd.netlify.com/).
+- [Customizing checkbox inputs](https://moderncss.dev/pure-css-custom-checkbox-style) - This is a great resource which helped me customize checkbox inputs in a responsive and accessible manner. I'd recommend it to anyone still learning this concept.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Author
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Website - [Ayobami Tunwase](https://github.com/ayobami11)
+- Frontend Mentor - [@ayobami11](https://www.frontendmentor.io/profile/ayobami11)
+- Twitter - [@TunwaseAyobami](https://www.twitter.com/@TunwaseAyobami)

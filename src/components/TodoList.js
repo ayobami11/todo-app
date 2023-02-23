@@ -21,6 +21,7 @@ const TodoList = ({ todos }) => {
         newTodos.splice(result.destination.index, 0, removed);
 
         dispatch({ type: 'REORDER_TODOS', payload: { todos: newTodos } });
+        dispatch({ type: 'SAVE_TODOS' });
     }
 
     return (
